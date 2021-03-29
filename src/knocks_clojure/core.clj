@@ -48,3 +48,21 @@
   )
 (group-by :type collection)
 (group-by (juxt :type :point) collection)
+
+;update
+(def person {:age 32 :name "naoki"})
+(update person :name #(str % " " "machida"))
+
+;constantly
+(constantly "nm")
+
+;re-find
+(re-find #"abc" "abc12345def")
+(re-find #"abcd" "abc12345def")
+
+;boolean
+(if "abc" "true" "false")
+(if 1 "true" "false")
+(if true "true" "false")
+(if false "true" "false")
+(if nil "true" "false")
